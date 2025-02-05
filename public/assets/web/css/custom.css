@@ -1,0 +1,209 @@
+/* Header Styles Start */
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+    width: max-content !important;
+    padding: 15px !important;
+}
+
+.last.dropdown:hover .dropdown-menu {
+    display: block !important;
+    padding: 15px !important;
+}
+
+.notification.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
+.notification .dropdown-menu {
+    width: 350px;
+    max-width: 90vw;
+    white-space: normal;
+    overflow: hidden;
+
+}
+
+.notification .dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item:hover {
+    border-radius: 5px !important;
+}
+
+.navbar .dropdown-item.active,
+.navbar .dropdown-item:active {
+    background-color: var(--primary-color) !important;
+    border-radius: 5px !important;
+}
+
+.notification .dropdown-item:focus,
+.notification .dropdown-item:hover {
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    color: #000000 !important;
+}
+
+.notification .dropdown-item.active,
+.notification .dropdown-item:active {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    color: #000000 !important;
+}
+
+.notification .dropdown-toggle::after,
+.last .dropdown-toggle::after {
+    display: none !important;
+}
+
+.notif-a {
+    color: #000000 !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.notif-a:hover {
+    color: #dc3545 !important;
+}
+
+/* Header Styles End */
+
+
+/* Footer Styles Start */
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer Styles End */
+
+
+/* Index Page Styles Start */
+
+.trending-srch a {
+    color: #000000;
+    font-size: 13px;
+}
+
+.trending-srch a:hover {
+    color: #dc3545;
+}
+
+.trans-details p {
+    font-size: 13px;
+}
+
+.trending-section h5 a,
+.market-section h6 a {
+    color: #000000 !important;
+}
+
+.trending-section h5 a:hover,
+.market-section h6 a:hover {
+    color: #dc3545 !important;
+}
+
+@media (max-width:768px) {
+
+    .trending-section .border-end,
+    .trending-section .my-border {
+        border-right: 0 !important;
+        border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    }
+}
+
+.market-section p a {
+    font-size: 13px;
+    color: #000000;
+}
+
+.blocks-sider-section a {
+    color: #000000;
+}
+
+.blocks-sider-section a:hover {
+    color: #dc3545;
+}
+
+
+
+.block-bg-animate-wrap {
+    box-shadow: 0 5px 20px -5px #10101024;
+    height: 1rem;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+}
+
+.block-bg-animate-wrap>div {
+    background: linear-gradient(0deg, #ffffffa6, #ffffffa6), #c2c9d1;
+    box-shadow: 0 -5px 20px -5px #10101024, inset 0 -3px 5px #ffffffb3, inset 0 3px 4px #ffffffb3;
+    height: 100%;
+    width: 100%;
+}
+
+.block-bg-animate-wrap>div>div {
+    background: url(../images/slider-new.8fec1792a41de35ad21d.svg);
+    height: 1rem;
+    width: 3rem;
+}
+
+.slider-move {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: slider-move;
+    animation-timing-function: linear;
+}
+
+@keyframes slider-move {
+    0% {
+        margin-left: 15%;
+    }
+
+    100% {
+        margin-left: 80%;
+    }
+}
+
+.trans-section h5 a,.trans-section .more a{
+    color: #000000;
+}
+.trans-section h5 a:hover,.trans-section .more a:hover {
+    color: #dc3545;
+}
+.trans-table {
+    font-size: 14px !important;
+}
+.trans-table a{
+    color: #000000;
+}
+.trans-table a:hover{
+    color: #dc3545;
+}
+
+.trans-section .counts a {
+    color: #000000; 
+}
+.trans-section .counts a:hover {
+    color: #dc3545;
+}
+
+/* Index Page Styles End */

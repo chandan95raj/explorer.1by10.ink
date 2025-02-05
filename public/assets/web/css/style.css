@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+p,h1,h2,h3,h4,h5,h6 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+:root {
+    --primary-color:#05d3e6 !important;
+    --primary-color-light:#6ccfd8 !important;
+}
+
+.btn:focus,input:focus,button:focus {
+    box-shadow: none !important;
+}
+
+.my-btn {
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    color: #ffffff !important;
+}
+.my-btn:hover {
+    background-color: var(--primary-color-light) !important;
+    border: 1px solid var(--primary-color-light) !important;
+    color: #ffffff !important;
+}
+
+.font-13 {
+    font-size: 13px !important;
+}
+.font-10 {
+    font-size: 11px !important;
+}
