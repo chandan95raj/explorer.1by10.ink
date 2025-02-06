@@ -1,8 +1,12 @@
-*{
+*, body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Lato", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, 
+                 "PingFang SC", "-apple-system", "BlinkMacSystemFont", "Apple Color Emoji", 
+                 "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Android Emoji", "EmojiSymbols";
 }
+
 p,h1,h2,h3,h4,h5,h6 {
     padding: 0 !important;
     margin: 0 !important;
@@ -32,9 +36,15 @@ a {
     color: #ffffff !important;
 }
 
+.font-12 {
+    font-size: 12px !important;
+}
 .font-13 {
     font-size: 13px !important;
 }
 .font-10 {
-    font-size: 11px !important;
+    font-size: 10px !important;
+}
+.font-14 {
+    font-size: 14px !important;
 }

@@ -9,7 +9,7 @@
                     <img src="{{ asset('assets/web/images/logo.png') }}" style="width:120px" alt="">
                 </div>
                 <div>
-                    <p class="mb-3">The best blockchain explorer of TRON</p>
+                    <p class="my-3">The best blockchain explorer of 1BY10</p>
                 </div>
                 <div>
                     <a href="#" class="me-3"><i class="fa-solid fa-envelope"></i></a>
@@ -21,14 +21,14 @@
             </div>
             <div class="col-lg-3 mb-3 mb-lg-0">
                 <h6>About US</h6>
-                <ul>
-                    <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Terms of Service</a></li>
+                <ul class="mt-3">
+                    <li class="nav-item"><a class="nav-link" href="{{url('/privacy-policy')}}">Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/terms-conditions')}}">Terms of Service</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 mb-3 mb-lg-0">
                 <h6>Service & Support</h6>
-                <ul>
+                <ul class="mt-3">
                     <li class="nav-item"><a class="nav-link" href="#">Api</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
@@ -36,10 +36,9 @@
             </div>
             <div class="col-lg-3">
                 <h6>Resources</h6>
-                <ul>
-                    <li class="nav-item"><a class="nav-link" href="#">TRON ETF</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">TRON Architecture</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">TRON Whitepaper V2.0</a></li>
+                <ul class="mt-3">
+                    <li class="nav-item"><a class="nav-link" href="#">1BY10 ETF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">1BY10 Architecture</a></li>
                 </ul>
             </div>
         </div>

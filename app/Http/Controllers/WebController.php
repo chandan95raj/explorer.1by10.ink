@@ -11,4 +11,16 @@ class WebController extends Controller
     {
         return view('web.index');
     }
+
+    //privacy-policy
+    public function privacyPolicyView()
+    {
+        return view('web.privacy-policy');
+    }
+
+    //terms-conditions
+    public function termsConditionsView()
+    {
+        return view('web.terms-conditions');
+    }
 }

@@ -1,9 +1,9 @@
 @include('web.chunks.header')
 <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="{{asset('/assets/web/swiper/swiper-bundle.min.css')}}">
 
 <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="{{asset('/assets/web/swiper/swiper-bundle.min.js')}}"></script>
 
 <style>
     .apexcharts-zoom-icon.apexcharts-selected svg {
@@ -58,6 +58,17 @@
         transform: matrix(-1, 0, 0, 1, 0, 0);
         width: 100%;
     }
+    .home-tvl-chart:before {
+        background: linear-gradient(90deg, #f3f5fb80, #f5f6fb00 14.75%, #fff0 0); 
+        bottom: 0;
+        content: "";
+        right: -1px;
+        position: absolute;
+        top: 0;
+        transform: scaleX(-1);
+        width: 100%;
+    }
+
 
     .my-border-none-one {
         border-top-right-radius: 0;
@@ -168,130 +179,187 @@
     </div>
 </div>
 
-<div class="row mt-3 card mx-0 trending-section">
-    <div class="col-lg-12 card-body">
-        <div class="row">
-            <div class="col-lg-6 pb-3 pt-3 pt-lg-0 border-end">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="d-flex gap-3">
-                            <div>
-                                <img src="{{ asset('/assets/web/images/icons/user.png') }}"
-                                    style="width: 40px;height:40px" alt="">
+<div class="row mt-3 mx-0 trending-section">
+    <div class="col-lg-12">
+        <div class="row ">
+            <div class="col-lg-8 card">
+                <div class="row card-body pb-0">
+                    <div class="col-lg-6 pb-3 pt-3 pt-lg-0 border-end">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="d-flex gap-3">
+                                    <div>
+                                        <img src="{{ asset('/assets/web/images/icons/user.png') }}"
+                                            style="width: 40px;height:40px" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-13">Total Accounts</p>
+                                        <h6><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Total number of activated accounts on 1BY10">287,556,879</a></h6>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <p>Total Accounts</p>
-                                <h5><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        data-bs-title="Total number of activated accounts on 1BY10">287,556,879</a></h5>
+                            <div class="col-lg-6 text-start text-lg-end">
+                                <p class="font-13">24h</p>
+                                <p class="font-14"><a href="#" class="text-success" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-title="New accounts on 1BY10 in the past 24 hours">+178,850</a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 text-start text-lg-end">
-                        <p>24h</p>
-                        <h6><a href="#" class="text-success" data-bs-toggle="tooltip" data-bs-placement="top"
-                                data-bs-title="New accounts on 1BY10 in the past 24 hours">+178,850</a></h6>
+                    <div class="col-lg-6 pb-3 pt-3 pt-lg-0 my-border">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="d-flex gap-3">
+                                    <div>
+                                        <img src="{{ asset('/assets/web/images/icons/tvl.png') }}"
+                                            style="width: 40px;height:40px" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-13">TVL</p>
+                                        <h6><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Total Value Locked (TVL) indicates the total value of assets locked ina all protocols on 1BY10">$18,656,666,881</a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-start text-lg-end">
+                                <p class="font-13">24h</p>
+                                <p class="font-14"><a href="#" class="text-success" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-title="Comparison between current assets locked on 1BY10 and that 24 hours ago">+1.15%</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 pb-3 pt-3 pt-lg-0 my-border">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="d-flex gap-3">
-                            <div>
-                                <img src="{{ asset('/assets/web/images/icons/tvl.png') }}"
-                                    style="width: 40px;height:40px" alt="">
+                <div class="row border-bottom py-0 card-body">
+                    <div class="col-lg-6 pb-3 pt-3 pt-lg-0 border-end">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="d-flex gap-3">
+                                    <div>
+                                        <img src="{{ asset('/assets/web/images/icons/total-trans.png') }}"
+                                            style="width: 40px;height:40px" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-13">Total Txns</p>
+                                        <h6><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Total number of transactions recorded on 1BY10">9,556,426,752</a>
+                                        </h6>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <p>TVL</p>
-                                <h5><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        data-bs-title="Total Value Locked (TVL) indicates the total value of assets locked ina all protocols on 1BY10">$18,656,666,881</a>
-                                </h5>
+                            <div class="col-lg-6 text-start text-lg-end">
+                                <p class="font-13">24h</p>
+                                <p class="font-14"><a href="#" class="text-success" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-title="Total transactions on 1BY10 in the past 24 hours">+6,995,968</a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 text-start text-lg-end">
-                        <p>24h</p>
-                        <h6><a href="#" class="text-success" data-bs-toggle="tooltip" data-bs-placement="top"
-                                data-bs-title="Comparison between current assets locked on 1BY10 and that 24 hours ago">+1.15%</a>
-                        </h6>
+                    <div class="col-lg-6 pb-3 pt-3 pt-lg-0">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="d-flex gap-3">
+                                    <div>
+                                        <img src="{{ asset('/assets/web/images/icons/t-value.png') }}"
+                                            style="width: 40px;height:40px" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-13">Total Transfer Volume</p>
+                                        <h6><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Total transfer volume of hot tokens on 1BY10">$16,450,189,125,150</a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-start text-lg-end">
+                                <p class="font-13">24h</p>
+                                <p class="font-14"><a href="#" class="text-success" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-title="The transfer volume on 1BY10 in the past 24 hours">+$24,364,954,014</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3 flex-wrap trans-details card-body p-0">
+                    <p>Current/Max TPS <span data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-title="TPS indicates the number of transactions processed on TRON per second, with a maximum of 1,035 ">98/1005</span>
+                    </p>
+                    <p>Nodes <span data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-title="Total number of nodes on TRON">7,993</span></p>
+                    <p>Total Contracts <span data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-title="Total number of smart contracts on 1BY10 Verified: 129,941 Unverified: 5,816,148">5,946,993</span>
+                    </p>
+                    <p>Total Tokens <span data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-title="Total number of tokens on 1By10, including TRC10, TRC20,  <br>  TRC721 and TRC1155 tokens  <br>  TRC10: 3,476 TRC20: 173,538  <br> TRC721: 1,715  <br>  TRC1155: 32"
+                            data-bs-html="true">178,761</span></p>
+                </div>
+            </div>
+            <div class="col-lg-4 card market-section">
+                <div class="w-100 card-body px-0">                    
+                    <div class="row graph-title border-bottom pb-2">
+                        <div class="col-lg-6">
+                            <div class="d-flex gap-3">
+                                <div>
+                                    <img src="{{ asset('/assets/web/images/icons/favicon.png') }}" style="width: 40px;height:40px"
+                                        alt="favicon">
+                                </div>
+                                <div>
+                                    <h6>1BY10</h6>
+                                    <div class="d-flex gap-2">
+                                        <h6><a href="#">$0.2245</a>
+                                        </h6>
+                                        <a href="#" class="badge text-success" style="background-color: #d1e7dd;"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-title="The price change in the past 24 hours"> +2.7% <i
+                                                class="fa-solid fa-arrow-up-long"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-start text-lg-end">
+                            <p><a href="#"><span class="text-muted">Total Market Cap</span> <span data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                data-bs-title="Total value of 1BY10 circulating across the market">$19.4b</span></a></p>
+                            <p><a href="#"><span class="text-muted">Volume(24h)</span> <span data-bs-toggle="tooltip"
+                                        data-bs-placement="top"
+                                        data-bs-title="Total trading volume of 1BY10 circulating across the market in the past 24 hours">$1.0b</span></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-8">
+                            <div id="chart"></div>
+                        </div>
+                        <div class="col-lg-4 text-start text-lg-end">
+                            <div>
+                                <p class="text-muted font-12">Supply</p>
+                                <p class="fw-bold"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-title="Total supply of 1BY10 on 1BY10">86,116,404,369</a></p>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-muted font-12">Staked</p>
+                                <p  class="fw-bold"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-title="1BY10 Staked : 44,086,755,337 <br> Stake 2.0 : 22,911,326,646  (51.97%) <br> Stake 1.0 : 21,175,428,691  (48.03%)"
+                                        data-bs-html="true">86,116,404,369</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row border-bottom pb-0">
-            <div class="col-lg-6 pb-3 pt-3 pt-lg-0 border-end">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="d-flex gap-3">
-                            <div>
-                                <img src="{{ asset('/assets/web/images/icons/total-trans.png') }}"
-                                    style="width: 40px;height:40px" alt="">
-                            </div>
-                            <div>
-                                <p>Total Txns</p>
-                                <h5><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        data-bs-title="Total number of transactions recorded on 1BY10">9,556,426,752</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-start text-lg-end">
-                        <p>24h</p>
-                        <h6><a href="#" class="text-success" data-bs-toggle="tooltip" data-bs-placement="top"
-                                data-bs-title="Total transactions on 1BY10 in the past 24 hours">+6,995,968</a></h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 pb-3 pt-3 pt-lg-0">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="d-flex gap-3">
-                            <div>
-                                <img src="{{ asset('/assets/web/images/icons/t-value.png') }}"
-                                    style="width: 40px;height:40px" alt="">
-                            </div>
-                            <div>
-                                <p>Total Transfer Volume</p>
-                                <h5><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        data-bs-title="Total transfer volume of hot tokens on 1BY10">$16,450,189,125,150</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-start text-lg-end">
-                        <p>24h</p>
-                        <h6><a href="#" class="text-success" data-bs-toggle="tooltip" data-bs-placement="top"
-                                data-bs-title="The transfer volume on 1BY10 in the past 24 hours">+$24,364,954,014</a>
-                        </h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex align-items-center gap-3 flex-wrap mt-3 trans-details">
-            <p>Current/Max TPS <span data-bs-toggle="tooltip" data-bs-placement="top"
-                    data-bs-title="TPS indicates the number of transactions processed on TRON per second, with a maximum of 1,035 ">98/1005</span>
-            </p>
-            <p>Nodes <span data-bs-toggle="tooltip" data-bs-placement="top"
-                    data-bs-title="Total number of nodes on TRON">7,993</span></p>
-            <p>Total Contracts <span data-bs-toggle="tooltip" data-bs-placement="top"
-                    data-bs-title="Total number of smart contracts on 1BY10 Verified: 129,941 Unverified: 5,816,148">5,946,993</span>
-            </p>
-            <p>Total Tokens <span data-bs-toggle="tooltip" data-bs-placement="top"
-                    data-bs-title="Total number of tokens on 1By10, including TRC10, TRC20,  <br>  TRC721 and TRC1155 tokens  <br>  TRC10: 3,476 TRC20: 173,538  <br> TRC721: 1,715  <br>  TRC1155: 32"
-                    data-bs-html="true">178,761</span></p>
-        </div>
+        
     </div>
 </div>
 
-<div class="row mt-3 card mx-0 market-section">
+{{-- <div class="row mt-3 card mx-0 market-section">
     <div class="col-lg-12 card-body">
         <div class="d-flex gap-3">
             <div>
-                <img src="{{ asset('/assets/web/images/icons/trx.png') }}" style="width: 40px;height:40px"
+                <img src="{{ asset('/assets/web/images/icons/favicon.png') }}" style="width: 40px;height:40px"
                     alt="">
             </div>
             <div>
-                <h6>TRX</h6>
+                <h6>1BY10</h6>
                 <div class="d-flex gap-2">
                     <h6><a href="#">$0.2245</a>
                     </h6>
@@ -306,12 +374,12 @@
             <div class="col-lg-6">
                 <p><a href="#"><span class="text-muted">Total Market Cap</span> <span data-bs-toggle="tooltip"
                             data-bs-placement="top"
-                            data-bs-title="Total value of TRX circulating across the market">$19.4b</span></a></p>
+                            data-bs-title="Total value of 1BY10 circulating across the market">$19.4b</span></a></p>
             </div>
             <div class="col-lg-6 text-start text-lg-end">
                 <p><a href="#"><span class="text-muted">Volume(24h)</span> <span data-bs-toggle="tooltip"
                             data-bs-placement="top"
-                            data-bs-title="Total trading volume of TRX circulating across the market in the past 24 hours">$1.0b</span></a>
+                            data-bs-title="Total trading volume of 1BY10 circulating across the market in the past 24 hours">$1.0b</span></a>
                 </p>
             </div>
         </div>
@@ -323,18 +391,18 @@
                 <div>
                     <p class="text-muted">Supply</p>
                     <h6><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-title="Total supply of TRX on 1BY10">86,116,404,369</a></h6>
+                            data-bs-title="Total supply of 1BY10 on 1BY10">86,116,404,369</a></h6>
                 </div>
                 <div class="mt-4">
                     <p class="text-muted">Staked</p>
                     <h6><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-title="TRX Staked : 44,086,755,337 <br> Stake 2.0 : 22,911,326,646  (51.97%) <br> Stake 1.0 : 21,175,428,691  (48.03%)"
+                            data-bs-title="1BY10 Staked : 44,086,755,337 <br> Stake 2.0 : 22,911,326,646  (51.97%) <br> Stake 1.0 : 21,175,428,691  (48.03%)"
                             data-bs-html="true">86,116,404,369</a></h6>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <div class="row mt-3 mx-0 blocks-sider-section position-relative w-100">
     <div class="col-lg-12 px-0">
@@ -364,10 +432,10 @@
                         </div>
                         <div class="d-flex justify-content-between mt-4">
                             <div>
-                                <p class="font-13">Reward 176 Trx</p>
+                                <p class="font-13">Reward 176 1BY10</p>
                             </div>
                             <div class="text-start text-lg-end mt-3 mt-lg-0">
-                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 Trx</p>
+                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 1BY10</p>
                             </div>
                         </div>
                     </div>
@@ -391,10 +459,10 @@
                         </div>
                         <div class="d-flex justify-content-between mt-4">
                             <div>
-                                <p class="font-13">Reward 176 Trx</p>
+                                <p class="font-13">Reward 176 1BY10</p>
                             </div>
                             <div class="text-start text-lg-end mt-3 mt-lg-0">
-                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 Trx</p>
+                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 1BY10</p>
                             </div>
                         </div>
                     </div>
@@ -418,10 +486,10 @@
                         </div>
                         <div class="d-flex justify-content-between mt-4">
                             <div>
-                                <p class="font-13">Reward 176 Trx</p>
+                                <p class="font-13">Reward 176 1BY10</p>
                             </div>
                             <div class="text-start text-lg-end mt-3 mt-lg-0">
-                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 Trx</p>
+                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 1BY10</p>
                             </div>
                         </div>
                     </div>
@@ -445,10 +513,10 @@
                         </div>
                         <div class="d-flex justify-content-between mt-4">
                             <div>
-                                <p class="font-13">Reward 176 Trx</p>
+                                <p class="font-13">Reward 176 1BY10</p>
                             </div>
                             <div class="text-start text-lg-end mt-3 mt-lg-0">
-                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 Trx</p>
+                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 1BY10</p>
                             </div>
                         </div>
                     </div>
@@ -472,10 +540,10 @@
                         </div>
                         <div class="d-flex justify-content-between mt-4">
                             <div>
-                                <p class="font-13">Reward 176 Trx</p>
+                                <p class="font-13">Reward 176 1BY10</p>
                             </div>
                             <div class="text-start text-lg-end mt-3 mt-lg-0">
-                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 Trx</p>
+                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 1BY10</p>
                             </div>
                         </div>
                     </div>
@@ -499,10 +567,10 @@
                         </div>
                         <div class="d-flex justify-content-between mt-4">
                             <div>
-                                <p class="font-13">Reward 176 Trx</p>
+                                <p class="font-13">Reward 176 1BY10</p>
                             </div>
                             <div class="text-start text-lg-end mt-3 mt-lg-0">
-                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 Trx</p>
+                                <p class="font-13"><i class="fa-solid fa-fire text-danger"></i> 383.456421 1BY10</p>
                             </div>
                         </div>
                     </div>
@@ -544,10 +612,10 @@
                                                     href="#">Tsafsa4545sfsa54445</a></p>
                                         </td>
                                         <td>
-                                            <p>10,545,554 <a href="#">TRX</a></p>
+                                            <p>10,545,554 <a href="#">1BY10</a></p>
                                             <a href="#" class="badge text-primary text-dark"
                                                 style="background-color: #d1e7dd;" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Transfer TRX"> Transfer TRX</a>
+                                                data-bs-placement="top" data-bs-title="Transfer 1BY10"> Transfer 1BY10</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -562,10 +630,10 @@
                                                     href="#">Tsafsa4545sfsa54445</a></p>
                                         </td>
                                         <td>
-                                            <p>10,545,554 <a href="#">TRX</a></p>
+                                            <p>10,545,554 <a href="#">1BY10</a></p>
                                             <a href="#" class="badge text-primary text-dark"
                                                 style="background-color: #d1e7dd;" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Transfer TRX"> Transfer TRX</a>
+                                                data-bs-placement="top" data-bs-title="Transfer 1BY10"> Transfer 1BY10</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -580,10 +648,10 @@
                                                     href="#">Tsafsa4545sfsa54445</a></p>
                                         </td>
                                         <td>
-                                            <p>10,545,554 <a href="#">TRX</a></p>
+                                            <p>10,545,554 <a href="#">1BY10</a></p>
                                             <a href="#" class="badge text-primary text-dark"
                                                 style="background-color: #d1e7dd;" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Transfer TRX"> Transfer TRX</a>
+                                                data-bs-placement="top" data-bs-title="Transfer 1BY10"> Transfer 1BY10</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -598,10 +666,10 @@
                                                     href="#">Tsafsa4545sfsa54445</a></p>
                                         </td>
                                         <td>
-                                            <p>10,545,554 <a href="#">TRX</a></p>
+                                            <p>10,545,554 <a href="#">1BY10</a></p>
                                             <a href="#" class="badge text-primary text-dark"
                                                 style="background-color: #d1e7dd;" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Transfer TRX"> Transfer TRX</a>
+                                                data-bs-placement="top" data-bs-title="Transfer 1BY10"> Transfer 1BY10</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -634,7 +702,7 @@
                                         <div>
                                             <div class="bg-danger rounded-circle" style="width: 7px;height:7px"></div>
                                         </div>
-                                        <p class="font-10">TRX Transfers </p>
+                                        <p class="font-10">1BY10 Transfers </p>
                                     </a>
                                     <a href="#" class="d-flex gap-1 align-items-center">
                                         <div>
@@ -655,6 +723,203 @@
     </div>
 </div>
 
+<div class="row mt-3 mx-0">
+    <div class="col-lg-12 px-0">
+        <div class="d-flex justify-content-between tvl-header">
+            <h5><a href="#">Tvl / TVC</a></h5>
+            <div class="d-flex align-items-center gap-2"> 
+                <div>
+                    <a href="#" class="btn btn-outline-danger btn-sm">Submit Project</a>
+                </div>
+                <p><a href="#">More <i class="fa-solid fa-chevron-right" style="font-size: 9px !important"></i></a></p>
+            </div>
+        </div>
+        <div class="row mt-3 g-0">
+            <div class="col-lg-5">
+                <div class="card home-tvl-chart my-border-none-one">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                            <div>
+                                <p class="text-muted">TVL</p>
+                                <h6>$20,449,663,572</h6>
+                            </div>
+                            <div>
+                                <div class="d-flex gap-2 counts">
+                                    <a href="#" class="d-flex gap-1 align-items-center">
+                                        <div>
+                                            <div class="bg-primary rounded-circle" style="width: 7px;height:7px">
+                                            </div>
+                                        </div>
+                                        <p class="font-10">TVL </p>
+                                    </a>
+                                    <a href="#" class="d-flex gap-1 align-items-center">
+                                        <div>
+                                            <div class="bg-danger rounded-circle" style="width: 7px;height:7px"></div>
+                                        </div>
+                                        <p class="font-10">1BY10 Staking Governance </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4" id="chart2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card my-border-none-two">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover tvl-table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Project</th>
+                                        <th>Category</th>
+                                        <th>TVL</th>
+                                        <th>Change(24h)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>
+                                                    <img src="{{asset('/assets/web/images/icons/favicon.png')}}" class="rounded-circle" style="width:20px;height:20px;" alt="">
+                                                </div>
+                                                <p><a href="#">1BY10 Staking Governance</a></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Governance</button>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">$9,510,545,455</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-success">+1.64%</p>
+                                        </td>
+                                    </tr>                                   
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>
+                                                    <img src="{{asset('/assets/web/images/icons/payn.png')}}" class="rounded-circle" style="width:20px;height:20px;" alt="">
+                                                </div>
+                                                <p><a href="#">JustLend DAO</a></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Lending</button>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Staking</button>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">$6,510,545,455</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-danger">-1.64%</p>
+                                        </td>
+                                    </tr>                                   
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>
+                                                    <img src="{{asset('/assets/web/images/icons/pw.png')}}" class="rounded-circle" style="width:20px;height:20px;" alt="">
+                                                </div>
+                                                <p><a href="#">Just Cryptos</a></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Cross Chain</button>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">$2,310,545,455</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-danger">-1.4%</p>
+                                        </td>
+                                    </tr>                                   
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>
+                                                    <img src="{{asset('/assets/web/images/icons/htx.jpeg')}}" class="rounded-circle" style="width:20px;height:20px;" alt="">
+                                                </div>
+                                                <p><a href="#">Sun.io</a></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> DEX</button>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Stablecoin</button>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Farm</button>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">$6,510,545,455</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-danger">+1.64%</p>
+                                        </td>
+                                    </tr>                                   
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>
+                                                    <img src="{{asset('/assets/web/images/icons/tron.jpeg')}}" class="rounded-circle" style="width:20px;height:20px;" alt="">
+                                                </div>
+                                                <p><a href="#">Demo DAO</a></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Lending</button>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Staking</button>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">$6,510,545,455</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-success">-1.64%</p>
+                                        </td>
+                                    </tr>                                   
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>
+                                                    <img src="{{asset('/assets/web/images/icons/wstusdt.png')}}" class="rounded-circle" style="width:20px;height:20px;" alt="">
+                                                </div>
+                                                <p><a href="#">Tst DAO</a></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Lending</button>
+                                            <button class="btn badge text-primary text-dark border-0"
+                                                style="background-color: #d1e7dd;" disabled> Staking</button>
+                                        </td>
+                                        <td>
+                                            <p class="text-muted">$6,510,545,455</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-success">-1.64%</p>
+                                        </td>
+                                    </tr>                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -666,12 +931,39 @@
             chart: {
                 type: 'line',
                 width: '100%',
-                height: '250px'
+                height: '150px'
             },
             series: [
                 {
                     name: 'sales',
                     data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+                }
+            ],
+            stroke: {
+                width: 1
+            },
+            colors: ['#05d3e6', '#ff9800', '#4caf50']
+        }
+
+        var options1 = {
+            chart: {
+                type: 'line',
+                width: '100%',
+                height: '214px',
+                toolbar: { show: false }
+            },
+            series: [
+                {
+                    name: 'sales',
+                    data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+                },
+                {
+                    name: 'Revenue',
+                    data: [20, 30, 25, 45, 40, 55, 65, 85, 110]
+                },
+                {
+                    name: 'Profit',
+                    data: [10, 20, 15, 30, 25, 40, 50, 70, 90]
                 }
             ],
             xaxis: {
@@ -682,11 +974,12 @@
             },
             colors: ['#05d3e6', '#ff9800', '#4caf50']
         }
-        var options1 = {
+
+        var options2 = {
             chart: {
                 type: 'line',
                 width: '100%',
-                height: '214px',
+                height: '209px',
                 toolbar: { show: false }
             },
             series: [
@@ -715,6 +1008,10 @@
         var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
 
         chart1.render();
+
+        var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+
+        chart2.render();
 
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
