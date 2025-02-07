@@ -20,8 +20,9 @@
                 </div>
             </div>
             <div class="col-lg-3 mb-3 mb-lg-0">
-                <h6>About US</h6>
+                <h6>Company Info</h6>
                 <ul class="mt-3">
+                    <li class="nav-item"><a class="nav-link" href="{{url('/about-us')}}">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/privacy-policy')}}">Privacy Policy</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/terms-conditions')}}">Terms of Service</a></li>
                 </ul>
@@ -29,7 +30,7 @@
             <div class="col-lg-3 mb-3 mb-lg-0">
                 <h6>Service & Support</h6>
                 <ul class="mt-3">
-                    <li class="nav-item"><a class="nav-link" href="#">Api</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/api')}}">Api</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
                 </ul>
@@ -37,8 +38,8 @@
             <div class="col-lg-3">
                 <h6>Resources</h6>
                 <ul class="mt-3">
-                    <li class="nav-item"><a class="nav-link" href="#">1BY10 ETF</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">1BY10 Architecture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/etf')}}">1BY10 ETF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/architecture')}}">1BY10 Architecture</a></li>
                 </ul>
             </div>
         </div>

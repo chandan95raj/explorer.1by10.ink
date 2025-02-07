@@ -23,4 +23,28 @@ class WebController extends Controller
     {
         return view('web.terms-conditions');
     }
+
+    //about-us
+    public function aboutView()
+    {
+        return view('web.about-us');
+    }
+
+    //api
+    public function apiView()
+    {
+        return view('web.api');
+    }
+
+    //etf
+    public function etfView()
+    {
+        return view('web.etf');
+    }
+
+    //architecture
+    public function architectureView()
+    {
+        return view('web.architecture');
+    }
 }

@@ -39,6 +39,7 @@
             right: 0;
             width: 62px;
         }
+
         .fixed-nav {
             position: fixed;
             top: 0;
@@ -49,12 +50,10 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             background-color: white;
         }
-
-
     </style>
 </head>
 
-<body style="background-color: #F0F5F5">
+<body style="background-color: #F6F7FB">
     <nav class="navbar navbar-expand-lg bg-light shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -68,7 +67,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/')}}">Home</a>
+                        <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Blockchain</a>
@@ -329,12 +328,14 @@
                         <a class="nav-link dropdown-toggle" href="#">Developers</a>
                         <ul class="dropdown-menu mega-menu" style="padding: 0 !important">
                             <li style="margin-bottom:unset !important;">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ url('/api') }}">
                                     <div class="py-2">
                                         <div><button class="btn btn-outline-dark btn-sm py-0">API</button> API</div>
                                         <p class="my-2">
-                                            Provide easy, efficient, and <br> secure access to the 1BY10 <br> network, ushering in
-                                            <br>the future of decentralization.<br> The security services enable you to<br>
+                                            Provide easy, efficient, and <br> secure access to the 1BY10 <br> network,
+                                            ushering in
+                                            <br>the future of decentralization.<br> The security services enable you
+                                            to<br>
                                             customize the security <br>strategy of your product.
                                         </p>
                                         <div class="d-flex align-items-center justify-content-between">
@@ -342,7 +343,8 @@
                                                 <span>API <i class="fa-solid fa-arrow-right-long"></i></span>
                                             </div>
                                             <div class="api-img">
-                                                <img src="{{asset('/assets/web/images/icons/topbar.png')}}"  style="width: 62px;height:60px" alt="">
+                                                <img src="{{ asset('/assets/web/images/icons/topbar.png') }}"
+                                                    style="width: 62px;height:60px" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -353,9 +355,10 @@
                 </ul>
 
                 <div class="navbar-right">
-                    <a href="#" class="text-dark">Register</a> |
-                    <a href="#" class="text-dark">Log In</a>
-                    <a href="#" class="btn my-btn btn-sm">Connect Wallet</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal"
+                        class="text-dark">Register</a> |
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="text-dark">Log In</a>
+                    <a href="#" class="btn btn-primary btn-sm">Connect Wallet</a>
                     <div class="notification dropdown">
                         <a href="#"
                             class="dropdown-toggle rounded-circle d-flex align-items-center justify-content-center border shadow-sm"
@@ -413,10 +416,91 @@
         </div>
     </nav>
 
+    <div class="modal fade" id="registerModal" aria-labelledby="registerModalLabel" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="background:#05d3e6;color:#ffffff;">
+                    <h1 class="modal-title fs-5" id="registerModalLabel">Register</h1>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="text" class="form-control" placeholder="Enter your email address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pasword" class="col-form-label">Password:</label>
+                            <input type="text" class="form-control" placeholder="Enter your password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirm-password" class="col-form-label">Confirm Password:</label>
+                            <input type="text" class="form-control" placeholder="Enter password again">
+                        </div>
+                        <div class="d-flex gap-2 mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    I agree
+                                </label>
+                            </div>
+                            <div>
+                                <a href="{{ url('/privacy-policy') }}" class="font-13">Privacy Policy</a>
+                                <a href="{{ url('/terms-conditions') }}" class="font-13">Terms of Service</a>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary w-100">Create</button>
+                        </div>
+                    </form>
+                    <div>
+                        <p>I have an account, <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                log in now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" aria-labelledby="loginModalLabel" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="background:#05d3e6;color:#ffffff;">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="text" class="form-control" placeholder="Enter your email address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pasword" class="col-form-label">Password:</label>
+                            <input type="text" class="form-control" placeholder="Enter your password">
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary w-100">Login</button>
+                        </div>
+                    </form>
+                    <div>
+                        <p>Don't have an account, <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">
+                                Register now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-      window.addEventListener("scroll", function () {
+        window.addEventListener("scroll", function() {
             let navbar = document.querySelector(".navbar");
-            if (window.scrollY > 80) { 
+            if (window.scrollY > 80) {
                 navbar.classList.add("fixed-nav");
             } else {
                 navbar.classList.remove("fixed-nav");
@@ -424,5 +508,6 @@
         });
     </script>
 
-    <section>
+    <section
+        style="background: url({{ asset('/assets/web/images/main-bg.png') }}) no-repeat;background-size: 100% 438px;}">
         <div class="container py-5">

@@ -21,6 +21,12 @@ a {
     --primary-color-light:#6ccfd8 !important;
 }
 
+.text-color {
+    color: var(--primary-color);
+}
+.bg-color {
+    background-color:  var(--primary-color);
+}
 .btn:focus,input:focus,button:focus {
     box-shadow: none !important;
 }
