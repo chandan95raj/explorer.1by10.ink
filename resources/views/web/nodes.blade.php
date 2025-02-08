@@ -1,6 +1,12 @@
 @include('web.chunks.header')
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<style>
+    .leaflet-control-attribution.leaflet-control{
+        display: none !important;
+    }
+</style>
 <div class="row mx-0">
     <div class="col-lg-12 px-0">
         <div class="input-group">
