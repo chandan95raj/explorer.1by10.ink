@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-lg-3 mb-3 mb-lg-0">
                 <div>
-                    <img src="{{ asset('assets/web/images/logo.png') }}" style="width:120px" alt="">
+                    <a href="{{url('/')}}"><img src="{{ asset('assets/web/images/logo.png') }}" style="width:120px" alt="logo"></a>
                 </div>
                 <div>
                     <p class="my-3">The best blockchain explorer of 1BY10</p>

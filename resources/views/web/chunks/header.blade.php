@@ -74,14 +74,14 @@
                         <ul class="dropdown-menu mega-menu">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <li><a class="dropdown-item" href="#">Nodes</a></li>
-                                    <li><a class="dropdown-item" href="#">Blocks</a></li>
-                                    <li><a class="dropdown-item" href="#">Accounts</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/blockchain/nodes')}}">Nodes</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/blockchain/blocks')}}">Blocks</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/blockchain/accounts')}}">Accounts</a></li>
                                 </div>
                                 <div class="col-md-6">
                                     <li><a class="dropdown-item" href="#">Contracts</a></li>
                                     <li><a class="dropdown-item" href="#">Transfers</a></li>
-                                    <li><a class="dropdown-item" href="#">Transactions</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/blockchain/transactions')}}">Transactions</a></li>
                                 </div>
                             </div>
                         </ul>

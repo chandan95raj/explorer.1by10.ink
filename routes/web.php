@@ -10,3 +10,7 @@ Route::get('/about-us', [WebController::class, 'aboutView']);
 Route::get('/api', [WebController::class, 'apiView']);
 Route::get('/etf', [WebController::class, 'etfView']);
 Route::get('/architecture', [WebController::class, 'architectureView']);
+Route::get('/blockchain/nodes', [WebController::class, 'blockNodesView']);
+Route::get('/blockchain/blocks', [WebController::class, 'blockBlocksView']);
+Route::get('/blockchain/accounts', [WebController::class, 'blockAccountsView']);
+Route::get('/blockchain/transactions', [WebController::class, 'blockTransView']);

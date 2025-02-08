@@ -47,4 +47,28 @@ class WebController extends Controller
     {
         return view('web.architecture');
     }
+
+    //blockchain/nodes
+    public function blockNodesView()
+    {
+        return view('web.nodes');
+    }
+
+    //blockchain/blocks
+    public function blockBlocksView()
+    {
+        return view('web.blocks');
+    }
+
+    //blockchain/accounts
+    public function blockAccountsView()
+    {
+        return view('web.accounts');
+    }
+
+    //blockchain/transactions
+    public function blockTransView()
+    {
+        return view('web.transactions');
+    }
 }

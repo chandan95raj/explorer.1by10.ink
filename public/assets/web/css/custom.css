@@ -234,4 +234,12 @@ footer a:hover {
     color: #dc3545;
 }
 
+.accounts-table {
+    font-size: 14px !important;
+}
+.accounts-table tbody tr td{
+    padding-top:16px !important;
+    padding-bottom:16px !important;
+}
+
 /* Index Page Styles End */
