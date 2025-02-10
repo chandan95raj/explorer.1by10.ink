@@ -79,8 +79,8 @@
                                     <li><a class="dropdown-item" href="{{url('/blockchain/accounts')}}">Accounts</a></li>
                                 </div>
                                 <div class="col-md-6">
-                                    <li><a class="dropdown-item" href="#">Contracts</a></li>
-                                    <li><a class="dropdown-item" href="#">Transfers</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/blockchain/contracts')}}">Contracts</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/blockchain/transfers')}}">Transfers</a></li>
                                     <li><a class="dropdown-item" href="{{url('/blockchain/transactions')}}">Transactions</a></li>
                                 </div>
                             </div>

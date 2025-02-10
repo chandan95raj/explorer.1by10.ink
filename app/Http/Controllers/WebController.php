@@ -66,9 +66,27 @@ class WebController extends Controller
         return view('web.accounts');
     }
 
+    //blockchain/contracts
+    public function blockContractsView()
+    {
+        return view('web.contracts');
+    }
+
+    //blockchain/transfers
+    public function blockTransfersView()
+    {
+        return view('web.transfers');
+    }
+
     //blockchain/transactions
     public function blockTransView()
     {
         return view('web.transactions');
+    }
+
+    //advertise
+    public function advertiseView()
+    {
+        return view('web.advertise');
     }
 }

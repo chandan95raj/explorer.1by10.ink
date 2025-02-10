@@ -94,7 +94,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex flex-wrap gap-3 mb-3 align-items-center">
-                    <p class="text-muted font-13 me-2">Only the first <span class="text-dark">10,000</span> records are displayed./p>
+                    <p class="text-muted font-13 me-2">Only the first <span class="text-dark">10,000</span> records are displayed.</p>
                 </div>
                 <div class="table-responsive">
                     <table class="table accounts-table">

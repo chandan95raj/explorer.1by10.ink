@@ -31,7 +31,7 @@
                 <h6>Service & Support</h6>
                 <ul class="mt-3">
                     <li class="nav-item"><a class="nav-link" href="{{url('/api')}}">Api</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/advertise')}}">Advertise</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
                 </ul>
             </div>
