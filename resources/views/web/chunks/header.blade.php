@@ -89,10 +89,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Tokens</a>
                         <ul class="dropdown-menu mega-menu">
-                            <li><a class="dropdown-item" href="#">Token Tracker</a></li>
+                            <li><a class="dropdown-item" href="{{url('/tokens/list')}}">Token Tracker</a></li>
                             <p class="font-12 text-muted my-2 ps-3">Hot Tokens</p>
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{url('/tokens/transfers')}}">
                                     <div class="d-flex gap-2 align-items-center">
                                         <div>
                                             <img src="{{ asset('/assets/web/images/icons/favicon.png') }}"
@@ -106,7 +106,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{url('/tokens/transfers')}}">
                                     <div class="d-flex gap-2 align-items-center">
                                         <div>
                                             <img src="{{ asset('/assets/web/images/icons/payn.png') }}"
@@ -120,7 +120,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{url('/tokens/transfers')}}">
                                     <div class="d-flex gap-2 align-items-center">
                                         <div>
                                             <img src="{{ asset('/assets/web/images/icons/pw.png') }}"
@@ -134,7 +134,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{url('/tokens/transfers')}}">
                                     <div class="d-flex gap-2 align-items-center">
                                         <div>
                                             <img src="{{ asset('/assets/web/images/icons/htx.jpeg') }}"
@@ -155,7 +155,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <p class="font-12 text-muted my-2 ps-3">Charts</p>
-                                    <li><a class="dropdown-item" href="#">1By10 Supply</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/data/charts/1by10/supply')}}">1By10 Supply</a></li>
                                     <li><a class="dropdown-item" href="#">Total Protocol Revenue</a></li>
                                     <li><a class="dropdown-item" href="#">Active Accounts</a></li>
                                     <li><a class="dropdown-item" href="#">Transaction Trend</a></li>

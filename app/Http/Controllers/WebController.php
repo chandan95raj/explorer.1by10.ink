@@ -89,4 +89,22 @@ class WebController extends Controller
     {
         return view('web.advertise');
     }
+
+    //tokens/list
+    public function tokenListView()
+    {
+        return view('web.token-list');
+    }
+
+    //tokens/transfers
+    public function tokenTransfersView()
+    {
+        return view('web.token-transfers');
+    }
+
+    //data/charts/1by10/supply
+    public function dataSupplyView()
+    {
+        return view('web.1by10-supply');
+    }
 }

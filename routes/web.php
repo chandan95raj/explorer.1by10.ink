@@ -17,3 +17,6 @@ Route::get('/blockchain/contracts', [WebController::class, 'blockContractsView']
 Route::get('/blockchain/transfers', [WebController::class, 'blockTransfersView']);
 Route::get('/blockchain/transactions', [WebController::class, 'blockTransView']);
 Route::get('/advertise', [WebController::class, 'advertiseView']);
+Route::get('/tokens/list', [WebController::class, 'tokenListView']);
+Route::get('/tokens/transfers', [WebController::class, 'tokenTransfersView']);
+Route::get('/data/charts/1by10/supply', [WebController::class, 'dataSupplyView']);
