@@ -20,3 +20,7 @@ Route::get('/advertise', [WebController::class, 'advertiseView']);
 Route::get('/tokens/list', [WebController::class, 'tokenListView']);
 Route::get('/tokens/transfers', [WebController::class, 'tokenTransfersView']);
 Route::get('/data/charts/1by10/supply', [WebController::class, 'dataSupplyView']);
+Route::get('/data/charts/revenue', [WebController::class, 'dataRevenueView']);
+Route::get('/data/charts/active-accounts', [WebController::class, 'dataActiveAccountsView']);
+Route::get('/data/charts/txn/daily-txn', [WebController::class, 'dataDailyTxnView']);
+Route::get('/data/charts/1by10', [WebController::class, 'data1By10View']);

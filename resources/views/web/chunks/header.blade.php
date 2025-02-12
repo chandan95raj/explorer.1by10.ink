@@ -156,10 +156,10 @@
                                 <div class="col-md-4">
                                     <p class="font-12 text-muted my-2 ps-3">Charts</p>
                                     <li><a class="dropdown-item" href="{{url('/data/charts/1by10/supply')}}">1By10 Supply</a></li>
-                                    <li><a class="dropdown-item" href="#">Total Protocol Revenue</a></li>
-                                    <li><a class="dropdown-item" href="#">Active Accounts</a></li>
-                                    <li><a class="dropdown-item" href="#">Transaction Trend</a></li>
-                                    <li><a class="dropdown-item" href="#">More <i
+                                    <li><a class="dropdown-item" href="{{url('/data/charts/revenue')}}">Total Protocol Revenue</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/data/charts/active-accounts')}}">Active Accounts</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/data/charts/txn/daily-txn')}}">Transaction Trend</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/data/charts/1by10')}}">More <i
                                                 class="fa-solid fa-chevron-right"
                                                 style="font-size: 9px !important"></i></a></li>
                                 </div>

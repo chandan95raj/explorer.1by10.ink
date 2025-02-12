@@ -107,4 +107,28 @@ class WebController extends Controller
     {
         return view('web.1by10-supply');
     }
+
+    //data/charts/revenue
+    public function dataRevenueView()
+    {
+        return view('web.revenue');
+    }
+
+    //data/charts/active-accounts
+    public function dataActiveAccountsView()
+    {
+        return view('web.active-accounts');
+    }
+    
+    //data/charts/txn/daily-txn
+    public function dataDailyTxnView()
+    {
+        return view('web.daily-txn');
+    }
+    
+    //data/charts/1by10
+    public function data1By10View()
+    {
+        return view('web.1by10');
+    }
 }
